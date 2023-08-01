@@ -14,17 +14,17 @@ export function Profile() {
       />
 
       <div className="flex flex-col">
-        <span className="block text-sm font-semibold text-zinc-700">
+        <span className="block text-sm font-semibold text-zinc-700 dark:text-zinc-100">
           Neander Souza
         </span>
 
-        <span className="block text-sm text-zinc-500">
+        <span className="block text-sm text-zinc-500 dark:text-zinc-400">
           mcspipoca47@gmail.com
         </span>
       </div>
 
       <Button variant="ghost" className="ml-auto">
-        <LogOut className="h-5 w-5 text-zinc-500" />
+        <LogOut className="h-5 w-5 text-zinc-500 dark:text-zinc-400" />
       </Button>
     </div>
   )

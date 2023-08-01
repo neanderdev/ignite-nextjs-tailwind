@@ -1,7 +1,7 @@
 'use client'
 
-import * as Tabs from '@radix-ui/react-tabs'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
+import * as Tabs from '@radix-ui/react-tabs'
 import { useState } from 'react'
 
 import { TabItem } from '@/components/TabItem'
@@ -13,7 +13,7 @@ export function SettingsTabs() {
     <Tabs.Root value={currentTab} onValueChange={setCurrentTab}>
       <ScrollArea.Root className="w-full" type="hover">
         <ScrollArea.Viewport className="w-full overflow-x-scroll">
-          <Tabs.List className="mt-6 flex w-full items-center gap-4 border-b border-zinc-200">
+          <Tabs.List className="mt-6 flex w-full items-center gap-4 border-b border-zinc-200 dark:border-zinc-800">
             <TabItem
               isSelected={currentTab === 'tab1'}
               value="tab1"
@@ -75,7 +75,7 @@ export function SettingsTabs() {
             />
           </Tabs.List>
         </ScrollArea.Viewport>
-        
+
         <ScrollArea.Scrollbar
           className="flex h-2.5 touch-none select-none flex-col bg-zinc-100 p-0.5"
           orientation="horizontal"
