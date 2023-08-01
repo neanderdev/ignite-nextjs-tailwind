@@ -1,5 +1,7 @@
 import { LogOut } from 'lucide-react'
 
+import { Button } from '../Button'
+
 export interface ProfileProps { }
 
 export function Profile() {
@@ -21,7 +23,9 @@ export function Profile() {
         </span>
       </div>
 
-      <LogOut className="ml-auto h-5 w-5 text-zinc-500" />
+      <Button variant="ghost" className="ml-auto">
+        <LogOut className="h-5 w-5 text-zinc-500" />
+      </Button>
     </div>
   )
 }

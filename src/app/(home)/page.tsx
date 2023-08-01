@@ -17,7 +17,7 @@ export default function Home() {
       <SettingsTabs />
 
       <div className="mt-6 flex flex-col">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-center">
           <div className="flex flex-col gap-1">
             <h2 className="text-lg font-medium text-zinc-900">Personal info</h2>
 
@@ -40,9 +40,9 @@ export default function Home() {
 
       <form
         id="settings"
-        className="mt-6 flex flex-col gap-5 divide-y divide-zinc-200"
+        className="mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200"
       >
-        <div className="grid grid-cols-form gap-3">
+        <div className="grid gap-3 lg:grid-cols-form">
           <label
             htmlFor="firstName"
             className="text-sm font-medium text-zinc-700"
@@ -50,7 +50,7 @@ export default function Home() {
             Name
           </label>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid gap-6 lg:grid-cols-2">
             <Input.Root>
               <Input.Control
                 name="firstName"
@@ -70,7 +70,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-form gap-3 pt-5">
+        <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <label htmlFor="email" className="text-sm font-medium text-zinc-700">
             Email address
           </label>
@@ -91,7 +91,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-form gap-3 pt-5">
+        <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <label
             htmlFor="photo"
             className="flex flex-col text-sm font-medium leading-relaxed text-zinc-700"
@@ -103,7 +103,7 @@ export default function Home() {
             </span>
           </label>
 
-          <FileInput.Root className="flex items-start gap-5">
+          <FileInput.Root className="flex flex-col items-start gap-5 lg:flex-row">
             <FileInput.ImagePreview />
 
             <FileInput.Trigger />
@@ -112,7 +112,7 @@ export default function Home() {
           </FileInput.Root>
         </div>
 
-        <div className="grid grid-cols-form gap-3 pt-5">
+        <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <label htmlFor="role" className="text-sm font-medium text-zinc-700">
             Role
           </label>
@@ -128,7 +128,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-form gap-3 pt-5">
+        <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <label
             htmlFor="country"
             className="flex flex-col text-sm font-medium leading-relaxed text-zinc-700"
@@ -139,7 +139,7 @@ export default function Home() {
           <CountrySelect />
         </div>
 
-        <div className="grid grid-cols-form gap-3 pt-5">
+        <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <label
             htmlFor="timezone"
             className="flex flex-col text-sm font-medium leading-relaxed text-zinc-700"
@@ -164,7 +164,7 @@ export default function Home() {
           </Select.Root>
         </div>
 
-        <div className="grid grid-cols-form gap-3 pt-5">
+        <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <label
             htmlFor="bio"
             className="flex flex-col text-sm font-medium leading-relaxed text-zinc-700"
@@ -177,7 +177,7 @@ export default function Home() {
           </label>
 
           <div className="flex flex-col gap-3">
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid gap-3 lg:grid-cols-2">
               <Select.Root defaultValue="normal">
                 <Select.Trigger>
                   <Select.Value />
@@ -195,40 +195,28 @@ export default function Home() {
               </Select.Root>
 
               <div className="flex items-center gap-1">
-                <button
-                  type="button"
-                  className="rounded-lg p-2 outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
-                >
-                  <Bold className="h-4 w-4 text-zinc-400" />
-                </button>
+                <Button variant="ghost">
+                  <Bold className="h-4 w-4 text-zinc-400" strokeWidth={3} />
+                </Button>
 
-                <button
-                  type="button"
-                  className="rounded-lg p-2 outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
-                >
-                  <Italic className="h-4 w-4 text-zinc-400" />
-                </button>
+                <Button variant="ghost">
+                  <Italic className="h-4 w-4 text-zinc-400" strokeWidth={3} />
+                </Button>
 
-                <button
-                  type="button"
-                  className="rounded-lg p-2 outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
-                >
-                  <Link className="h-4 w-4 text-zinc-400" />
-                </button>
+                <Button variant="ghost">
+                  <Link className="h-4 w-4 text-zinc-400" strokeWidth={3} />
+                </Button>
 
-                <button
-                  type="button"
-                  className="rounded-lg p-2 outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
-                >
-                  <List className="h-4 w-4 text-zinc-400" />
-                </button>
+                <Button variant="ghost">
+                  <List className="h-4 w-4 text-zinc-400" strokeWidth={3} />
+                </Button>
 
-                <button
-                  type="button"
-                  className="rounded-lg p-2 outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
-                >
-                  <ListOrdered className="h-4 w-4 text-zinc-400" />
-                </button>
+                <Button variant="ghost">
+                  <ListOrdered
+                    className="h-4 w-4 text-zinc-400"
+                    strokeWidth={3}
+                  />
+                </Button>
               </div>
             </div>
 
@@ -240,7 +228,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-form gap-3 pt-5">
+        <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <label
             htmlFor="bio"
             className="flex flex-col text-sm font-medium leading-relaxed text-zinc-700"
