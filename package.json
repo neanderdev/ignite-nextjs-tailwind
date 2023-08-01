@@ -9,15 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tabs": "^1.0.4",
+    "cva": "npm:class-variance-authority@^0.7.0",
     "framer-motion": "^10.15.0",
     "lucide-react": "^0.263.1",
     "next": "13.4.12",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.1.0",
+    "@tailwindcss/forms": "^0.5.4",
     "@types/node": "^20.4.5",
     "@types/react": "^18.2.18",
     "@types/react-dom": "^18.2.7",
@@ -26,6 +30,7 @@
     "eslint-config-next": "^13.4.12",
     "postcss": "^8.4.27",
     "prettier-plugin-tailwindcss": "^0.4.1",
+    "tailwind-scrollbar": "^3.0.4",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6"
   }
